@@ -31,10 +31,7 @@ const products = [
 const listProduct = document.getElementById('list-product')
 
 const productView = products.map(product => 
-    `<div class="row">
-            <div class="col-lg-4 col-12"></div>
-        </div>
-        <div class="card" style="width: 18rem;">
+    `<div class="card" style="width: 18rem;">
         <img src="${product.img_url}" class="card-img-top" alt="Velosamba">
         <div class="card-body">
           <h5 class="card-title">${product.product_name}</h5>
@@ -46,7 +43,8 @@ const productView = products.map(product =>
             Add To Cart
           </a>
         </div>
-      </div>`
+        </div>
+        </div>`
 ).join(",").replaceAll(",")
 
 listProduct.innerHTML = productView
